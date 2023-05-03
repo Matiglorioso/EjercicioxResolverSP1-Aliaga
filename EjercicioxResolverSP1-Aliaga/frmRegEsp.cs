@@ -17,7 +17,6 @@ namespace EjercicioxResolverSP1_Aliaga
         {
             InitializeComponent();
         }
-        private const string PATH_ARCHIVO = "Especialidades.txt";
         private void Form1_Load(object sender, EventArgs e)
         {
             txtID.Text = "";
@@ -33,7 +32,7 @@ namespace EjercicioxResolverSP1_Aliaga
                 if (txtNombre.Text != "") // controla el nombre
                 {
                     Especialidad esp = new Especialidad();
-                    esp.NombreArchivo = PATH_ARCHIVO;
+                    esp.NombreArchivo = "Especialidades.txt";
                     // controla que no se repita el codigo del repuesto
                     if (esp.BuscarIDEspecialidad(txtID.Text) == false)
                     {
@@ -42,7 +41,10 @@ namespace EjercicioxResolverSP1_Aliaga
                     }
                     else
                     {
-                        MessageBox.Show("El ID de la Especialidad ya existe", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El ID de la especialidad ya existe", "ATENCIÓN", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtID.Focus();
+                        txtID.SelectAll();
                     }
                 }
             }
@@ -63,7 +65,7 @@ namespace EjercicioxResolverSP1_Aliaga
             {
                 Especialidad nuevaEsp = CrearEspecialidad();
                 Especialidad especialidad = new Especialidad();
-                especialidad.NombreArchivo = PATH_ARCHIVO;
+                especialidad.NombreArchivo = "Especialidades.txt";
                 especialidad.GrabarEspecialidad(nuevaEsp);
                 txtID.Text = "";
                 txtNombre.Text = "";

@@ -17,7 +17,6 @@ namespace EjercicioxResolverSP1_Aliaga
         {
             InitializeComponent();
         }
-        private const string PATH_ARCHIVO2 = "Medicos.txt";
 
         private void frmRegMed_Load(object sender, EventArgs e)
         {
@@ -48,7 +47,7 @@ namespace EjercicioxResolverSP1_Aliaga
                 if (txtNombreMed.Text != "") // controla el nombre
                 {
                     Medico MED = new Medico();
-                    MED.NombreArchivo2 = PATH_ARCHIVO2;
+                    MED.NombreArchivo2 = "Medicos.txt";
                     // controla que no se repita el codigo del repuesto
                     if (MED.BuscarMatricula(txtMatricula.Text) == false)
                     {
@@ -57,7 +56,10 @@ namespace EjercicioxResolverSP1_Aliaga
                     }
                     else
                     {
-                        MessageBox.Show("La matrícula ingresada ya existe", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("La matrícula ingresada ya existe", "ATENCIÓN", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtMatricula.Focus();
+                        txtMatricula.SelectAll();
                     }
                 }
             }
@@ -91,7 +93,7 @@ namespace EjercicioxResolverSP1_Aliaga
             {
                 Medico nuevoMed = CrearMedico();
                 Medico medico = new Medico();
-                medico.NombreArchivo2 = PATH_ARCHIVO2;
+                medico.NombreArchivo2 = "Medicos.txt";
                 medico.GrabarMedico(nuevoMed);
                 txtNombreMed.Text = "";
                 txtMatricula.Text = "";

@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvConsultaMed = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEspeci = new System.Windows.Forms.Label();
             this.cmbEspecialidades = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.mrcConsulta = new System.Windows.Forms.GroupBox();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaMed)).BeginInit();
             this.mrcConsulta.SuspendLayout();
             this.SuspendLayout();
@@ -47,22 +46,11 @@
             this.dgvConsultaMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaMed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dgvConsultaMed.Location = new System.Drawing.Point(24, 152);
+            this.Column2});
+            this.dgvConsultaMed.Location = new System.Drawing.Point(36, 166);
             this.dgvConsultaMed.Name = "dgvConsultaMed";
-            this.dgvConsultaMed.Size = new System.Drawing.Size(343, 180);
+            this.dgvConsultaMed.Size = new System.Drawing.Size(244, 180);
             this.dgvConsultaMed.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Matricula";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
             // 
             // lblEspeci
             // 
@@ -93,7 +81,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(103, 351);
+            this.btnCancelar.Location = new System.Drawing.Point(74, 352);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 4;
@@ -102,7 +90,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(211, 351);
+            this.btnVolver.Location = new System.Drawing.Point(182, 352);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 5;
@@ -114,23 +102,28 @@
             this.mrcConsulta.Controls.Add(this.lblEspeci);
             this.mrcConsulta.Controls.Add(this.cmbEspecialidades);
             this.mrcConsulta.Controls.Add(this.btnConsultar);
-            this.mrcConsulta.Location = new System.Drawing.Point(24, 23);
+            this.mrcConsulta.Location = new System.Drawing.Point(36, 37);
             this.mrcConsulta.Name = "mrcConsulta";
             this.mrcConsulta.Size = new System.Drawing.Size(244, 100);
             this.mrcConsulta.TabIndex = 6;
             this.mrcConsulta.TabStop = false;
             this.mrcConsulta.Text = "Consultar";
             // 
-            // Column3
+            // Column1
             // 
-            this.Column3.HeaderText = "Especialidad";
-            this.Column3.Name = "Column3";
+            this.Column1.HeaderText = "Matricula";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
             // 
             // frmConsultaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 450);
+            this.ClientSize = new System.Drawing.Size(337, 450);
             this.Controls.Add(this.mrcConsulta);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCancelar);
@@ -148,14 +141,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvConsultaMed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label lblEspeci;
         private System.Windows.Forms.ComboBox cmbEspecialidades;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.GroupBox mrcConsulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
